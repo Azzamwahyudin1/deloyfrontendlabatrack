@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.backround-color {
+  background-color: #0f6e56;
+  min-height: 100vh;
+  /* Ini WAJIB biar ijonya mentok sampe bawah */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  /* Biar tulisan otomatis putih */
+  font-family: sans-serif;
+}
+
+.logo-labatrack {
+  width: 310px;
+  height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+  padding: 10px 20px 30px 30px;
+  gap: 10px;
+}
+
+.text-linklabahead {
+  float: right;
+  font-size: 20px;
+  margin-top: 60px;
+  margin: 30px;
+  padding: 15px;
+  color: solid black;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  margin: 35px;
+  padding: 15px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.highlight-box {
+  background-color: #1eb589;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.highlight-box h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  color: solid black;
+}
+
+/* Button Styling */
+.button-login {
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #e67610;
+}
+
+.button-login:hover {
+  transform: scale(1.07);
+}
+
+/* Image Section */
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background-color: #2db870;
+
+  position: absolute;
+  right: 30px;
+  /* ← geser kiri/kanan */
+  top: 50%;
+  /* ← geser atas/bawah */
+  transform: translateY(-50%);
+  /* ← biar tengah secara vertikal */
+}
+
+.manekin {
+  position: absolute;
+  right: 10px;
+  /* ← geser kiri/kanan */
+  bottom: -50px;
+  /*← geser atas/bawah */
+  width: 300px;
+  /* ← perbesar/perkecil orangnya */
+  z-index: 2;
+  object-fit: contain;
+}
+
+.backround-color2 {
+  background-color: #0f6e56;
+  min-height: 100vh;
+  /* Ini WAJIB biar ijonya mentok sampe bawah */
+  width: 100%;
+  margin: 0;
+  padding: 80px 0;
+}
+
+.fitur {
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+}
+
+.h1-fitur {
+  font-size: 64px;
+  font-weight: bold;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.p-fitur {
+  font-size: 15px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0px;
+  line-height: 1.7;
+}
+
+.container-fitur {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-card {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-item {
+  background-color: rgb(168, 166, 166);
+  border-radius: 60px;
+  /* Sudut membulat besar */
+  padding: 50px 30px;
+  width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-box {
+  background-color: #1d9e75;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+.title-card {
+  color: #000;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.desc-card {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Container utama footer (paling luar) */
+.footer-main {
+  background-color: #1e1e1e;
+  /* Warna background abu-abu gelap/hitam */
+  color: white;
+  /* Warna teks utama jadi putih */
+  padding: 60px 20px 20px 20px;
+  /* Jarak dalam: atas 60px, samping 20px, bawah 20px */
+}
+
+/* Pembungkus isi footer supaya rapi di tengah */
+.footer-container {
+  display: flex;
+  /* Mengaktifkan mode Flexbox agar konten bisa berjejer */
+  justify-content: space-around;
+  /* Memberi jarak merata di antara kolom-kolom */
+  flex-wrap: wrap;
+  /* Jika layar sempit (HP), kolom akan otomatis turun ke bawah */
+  max-width: 1200px;
+  /* Lebar maksimal konten agar tidak terlalu lebar di monitor besar */
+  margin: 0 auto;
+  /* Membuat container berada tepat di tengah layar */
+  gap: 40px;
+  /* Jarak antar kolom footer */
+}
+
+/* Pengaturan untuk setiap kolom di footer */
+.footer-col {
+  flex: 1;
+  /* Setiap kolom akan membagi ruang secara adil/sama rata */
+  min-width: 250px;
+  /* Lebar minimal kolom sebelum dia memutuskan untuk pindah baris */
+}
+
+/* Pengaturan ukuran logo utama di footer */
+.footer-logo-main {
+  width: 250px;
+  /* Lebar gambar logo */
+  margin-bottom: 20px;
+  /* Jarak antara logo dengan konten di bawahnya */
+}
+
+/* Pengaturan teks kecil di bagian "Support by" */
+.support-section p {
+  font-size: 14px;
+  /* Ukuran tulisan agak kecil */
+  margin-bottom: 10px;
+  /* Jarak teks ke kotak logo sponsor */
+}
+
+/* Kotak putih tempat logo sponsor (DBS & Dicoding) */
+.support-box {
+  background-color: white;
+  /* Background putih supaya logo sponsor kelihatan jelas */
+  display: flex;
+  /* Mengatur logo sponsor agar berjejer ke samping */
+  align-items: center;
+  /* Membuat logo sponsor sejajar secara vertikal (tengah) */
+  gap: 15px;
+  /* Jarak antar logo sponsor */
+  padding: 10px 15px;
+  /* Jarak dalam kotak putih */
+  border-radius: 5px;
+  /* Sudut kotak dibuat melengkung halus */
+  width: fit-content;
+  /* Lebar kotak mengikuti ukuran isi di dalamnya */
+}
+
+/* Ukuran tinggi logo sponsor */
+.support-img {
+  height: 50px;
+  /* Tinggi logo dibuat seragam 25px */
+}
+
+/* Garis pembatas vertikal di antara logo sponsor */
+.footer-divider {
+  width: 1px;
+  /* Lebar garis hanya 1 pixel */
+  height: 25px;
+  /* Tinggi garis menyamakan logo */
+  background-color: #ccc;
+  /* Warna garis abu-abu muda */
+}
+
+/* Daftar link navigasi (Tentang kami, Home, dll) */
+.footer-links {
+  list-style: none;
+  /* Menghilangkan simbol titik (bullet) daftar */
+  padding: 0;
+  /* Menghapus jarak bawaan browser */
+  line-height: 2.5;
+  /* Memberi jarak antar baris teks agar enak dibaca */
+  font-size: 18px;
+  /* Ukuran tulisan navigasi */
+}
+
+/* Judul setiap kolom (misal: "KONTAK KAMI") */
+.footer-heading {
+  font-size: 16px;
+  /* Ukuran tulisan judul */
+  letter-spacing: 1px;
+  /* Memberi jarak antar huruf agar terkesan modern */
+  margin-bottom: 20px;
+  /* Jarak judul ke isi konten di bawahnya */
+}
+
+/* Baris untuk item kontak (Ikon + Teks) */
+.contact-item {
+  display: flex;
+  /* Ikon dan teks berjejer ke samping */
+  align-items: center;
+  /* Ikon dan teks sejajar di tengah secara vertikal */
+  gap: 12px;
+  /* Jarak antara ikon dengan teksnya */
+  margin-bottom: 15px;
+  /* Jarak antar baris kontak (Email ke WhatsApp) */
+}
+
+/* Ukuran ikon Gmail dan WhatsApp */
+.contact-icon {
+  width: 24px;
+  /* Lebar ikon */
+  height: 24px;
+  /* Tinggi ikon */
+}
+
+/* Bagian paling bawah (Copyright) */
+.footer-bottom {
+  text-align: center;
+  /* Teks dibuat ke tengah */
+  margin-top: 50px;
+  /* Jarak dari konten footer ke baris copyright */
+  padding-top: 20px;
+  /* Jarak dalam di atas teks */
+  border-top: 1px solid #333;
+  /* Memberi garis tipis sebagai pembatas atas */
+  font-size: 12px;
+  /* Ukuran teks sangat kecil */
+  color: #888;
+  /* Warna teks abu-abu pudar */
+}
+
+/* Pengaturan khusus kolom navigasi supaya posisinya bagus */
+.nav-col {
+  display: flex;
+  /* Menggunakan flex untuk mengatur posisi list */
+  justify-content: center;
+  /* Membuat list navigasi berada di tengah kolom */
+}
+
+/* --- MEDIA QUERIES UNTUK RESPONSIVE --- */
+
+/* 1. Tablet & Laptop Kecil (Max 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column; /* Gambar pindah ke bawah teks */
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    position: relative; /* Menghilangkan absolute agar tidak menabrak teks */
+    right: 0;
+    top: 0;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .manekin {
+    right: 50%;
+    transform: translateX(50%); /* Mengetengahkan manekin di atas lingkaran */
+  }
+
+  .h1-fitur {
+    font-size: 48px;
+  }
+}
+
+/* 2. HP / Smartphone (Max 768px) */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .highlight-box h1 {
+    font-size: 2.8rem;
+  }
+
+  .logo-labatrack {
+    width: 220px; /* Logo mengecil di HP */
+    height: auto;
+  }
+
+  .text-linklabahead {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Fitur Section */
+  .h1-fitur {
+    font-size: 36px;
+    padding: 0 20px;
+  }
+
+  .card-item {
+    width: 100%; /* Card memenuhi layar HP */
+    max-width: 350px;
+    border-radius: 40px;
+    padding: 40px 20px;
+  }
+
+  /* Footer Section */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .support-box {
+    margin: 0 auto; /* Mengetengahkan logo sponsor di HP */
+  }
+
+  .contact-item {
+    justify-content: center; /* Mengetengahkan kontak di HP */
+  }
+
+  .nav-col {
+    justify-content: center;
+  }
+}
+
+/* 3. HP Sangat Kecil (Max 480px) */
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .highlight-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .button-login {
+    width: 100%; /* Tombol jadi lebar penuh di HP kecil */
+    padding: 12px;
+  }
+
+  .footer-logo-main {
+    width: 180px;
+  }
+}
+
+/* ===== TAMBAHAN RESPONSIVE ===== */
+
+/* Fix manekin & hero image di semua device */
+@media (max-width: 1024px) {
+  .hero-image {
+    min-height: 380px;
+    justify-content: center;
+  }
+
+  .manekin {
+    width: 280px;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-image {
+    min-height: 300px;
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .manekin {
+    width: 220px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .fitur {
+    margin-top: 30px;
+  }
+
+  .p-fitur {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .manekin {
+    width: 180px;
+  }
+
+  .hero-image {
+    min-height: 250px;
+  }
+
+  .h1-fitur {
+    font-size: 28px;
+  }
+}
+
+/* HP super kecil (iPhone SE, dll) */
+@media (max-width: 375px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .highlight-box h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .manekin {
+    width: 155px;
+  }
+
+  .hero-image {
+    min-height: 220px;
+  }
+}

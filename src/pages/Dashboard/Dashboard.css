@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    --bg-light: #f4f4f4;
+    --card-bg: #d9d9d9;
+    --text-main: #000;
+    --text-muted: #666;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--primary);
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+/* MENU */
+/* Main Content Area */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.header-title h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.stat-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.stat-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.icon-box {
+    background-color: #f3a633;
+    /* Warna orange logo */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-footer {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.transaction-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.2rem;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.transaction-table th {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #eee;
+    font-weight: bold;
+}
+
+.transaction-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* PROFILE */
+.profile {
+    margin-top: auto;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    /* Muncul hanya di mobile */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background: #1f7a63;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logout-item {
+    background: none;
+    background-color: #1f7a63;
+    padding: 8px 12px;
+    margin: 3px;
+    border: none;
+    border-radius: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    gap: 1px;
+}
+
+.logout-item:hover {
+    background-color: #e67610;
+    transition-delay: 0.2s;
+    transform: scale(1.07);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+}

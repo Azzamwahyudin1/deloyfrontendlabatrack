@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* Variabel CSS untuk Warna Utama (menyesuaikan gambar) */
+:root {
+    --primary-green: #0d8c6b;
+    /* Hijau tombol Login */
+    --text-gray: #7d7d7d;
+    /* Abu-abu teks placeholder */
+    --border-gray: #ddd;
+    /* Abu-abu border input */
+    --light-green: #246152;
+    /* Hijau teks link */
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    /* Shadow halus untuk kartu */
+}
+
+/* Mengatur background putih di SELURUH halaman */
+.login-page {
+    background-color: #1d9e75;
+    width: 100%;
+    min-height: 100vh;
+    /* Pastikan menutupi seluruh tinggi layar */
+    display: flex;
+    justify-content: center;
+    /* Meratakan kartu di tengah horizontal */
+    align-items: center;
+    /* Meratakan kartu di tengah vertikal */
+    padding: 20px;
+}
+
+/* Kartu Form Login */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    /* Lebar maksimal kartu */
+    padding: 40px;
+    border-radius: 10px;
+    /* Sudut tumpul */
+    box-shadow: 0 4px 12px var(--shadow-color);
+    /* Shadow halus */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Judul "Form Login" */
+.login-title {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Container untuk form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Group untuk setiap input */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Gaya dasar Input Box (menyesuaikan gambar) */
+.login-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    box-sizing: border-box;
+    /* Agar padding tidak mempengaruhi lebar */
+    outline: none;
+    /* Menghapus outline bawaan browser */
+    transition: border-color 0.3s ease;
+    /* Animasi saat fokus */
+}
+
+/* Placeholder warna abu-abu (menyesuaikan gambar) */
+.login-input::placeholder {
+    color: var(--text-gray);
+}
+
+/* Gaya saat input difokuskan */
+.login-input:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(13, 140, 107, 0.1);
+    /* Efek fokus halus */
+}
+
+/* Gaya kursor berkedip seperti di gambar password */
+.password-input {
+    cursor: text;
+}
+
+/* Container untuk link "Lupa password?" */
+.forgot-password-container {
+    display: flex;
+    justify-content: flex-start;
+    /* Meratakan ke kiri */
+    margin-bottom: 25px;
+}
+
+/* Gaya link "Lupa password?" (menyesuaikan gambar) */
+.forgot-password-link {
+    color: var(--light-green);
+    font-size: 14px;
+    text-decoration: none;
+    /* Menghapus garis bawah */
+    transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+    /* Garis bawah saat hover */
+}
+
+/* Tombol Login (menyesuaikan gambar) */
+.btn-login {
+    background-color: #1d9e75;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.btn-login:hover {
+    background-color: #f5851f;
+    transition-delay: 0.1s;
+    /* Hijau lebih gelap saat hover */
+}
+
+/* Container teks "Belum punya akun?" */
+.register-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-text {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Gaya link "Daftar" (menyesuaikan gambar) */
+.register-link {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.register-link:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+    transition-delay: 5s;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+}
+
+/* ===== ANIMASI LOGO ===== */
+
+/* Animasi mengambang naik-turun */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animasi glow berdenyut */
+@keyframes glowPulse {
+    0% {
+        box-shadow:
+            0 0 20px rgba(13, 140, 107, 0.3),
+            0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(13, 140, 107, 0.7),
+            0 4px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px rgba(13, 140, 107, 0.3),
+            0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Animasi outline berputar */
+@keyframes rotateBorder {
+    0% {
+        outline-color: rgba(29, 158, 117, 0.4);
+    }
+
+    50% {
+        outline-color: rgba(29, 158, 117, 1);
+    }
+
+    100% {
+        outline-color: rgba(29, 158, 117, 0.4);
+    }
+}
+
+/* Terapkan animasi ke logo */
+.logo-labatrack2 {
+    animation:
+        floatUpDown 3s ease-in-out infinite,
+        glowPulse 2.5s ease-in-out infinite,
+        rotateBorder 2.5s ease-in-out infinite;
+}
+
+/* Hover: hentikan float, scale lebih besar */
+.logo-labatrack2:hover {
+    animation: none;
+    /* stop animasi saat hover */
+    transform: scale(1.1) translateY(-5px);
+    box-shadow:
+        0 0 50px rgba(13, 140, 107, 0.8),
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ===== RESPONSIF ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-labatrack2 {
+        width: 160px;
+        height: 160px;
+        padding: 12px;
+    }
+}
+
+/* HP / Mobile */
+@media (max-width: 480px) {
+    .logo-labatrack2 {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+/* ✅ Ganti dengan ini */
+.login-page {
+    position: relative;
+}
+
+.logo-labatrack2 {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 270px;
+    height: 100px;
+    background-color: #0f6e56 !important;
+    border-radius: 20px;
+}

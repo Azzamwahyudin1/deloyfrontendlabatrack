@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* FULLSCREEN */
+.auth-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* BOX FULL */
+.auth-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* LEFT */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #1fa463, #0c7a4a);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 40px;
+    text-align: center;
+}
+
+.auth-left h1 {
+    font-size: 35px;
+}
+
+.auth-left p {
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.btn-orange {
+    background: orange;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* RIGHT */
+.auth-right {
+    flex: 1;
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-right h2 {
+    font-size: 28px;
+}
+
+.auth-right p {
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.auth-form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+
+.btn-green {
+    background: #1fa463;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    /* jarak dari atas */
+    left: 20px;
+    /* jarak dari kiri */
+    width: 310px;
+    /* ukuran logo */
+    height: 110px;
+    object-fit: contain;
+    z-index: 10;
+    /* supaya tidak ketutup elemen lain */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    /* space untuk icon */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+h2 {
+    color: #0c7a4a;
+}
+
+/* --- RESPONSIVE UNTUK LAPTOP & DESKTOP --- */
+@media (min-width: 1025px) {
+    .auth-box {
+        flex-direction: row; /* Berjejer ke samping */
+    }
+
+    .auth-left, .auth-right {
+        height: 100vh;
+        padding: 60px;
+    }
+
+    .auth-form {
+        max-width: 400px; /* Form sedikit lebih lebar di laptop */
+    }
+}
+
+/* --- RESPONSIVE UNTUK TABLET & MOBILE --- */
+@media (max-width: 1024px) {
+    .auth-container {
+        height: auto; /* Biar bisa di-scroll jika konten panjang */
+        min-height: 100vh;
+    }
+
+    .auth-box {
+        flex-direction: column; /* Tumpuk ke bawah */
+    }
+
+    .auth-left {
+        order: 2; /* Pindahkan panel hijau ke bawah form pada mobile (opsional) */
+        padding: 50px 20px;
+        min-height: 300px;
+    }
+
+    .auth-right {
+        order: 1; /* Form login muncul duluan di mobile */
+        padding: 80px 20px 40px 20px; /* Padding atas lebih besar karena ada logo */
+        background: white;
+    }
+
+    .logo {
+        width: 180px; /* Logo mengecil di mobile */
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%); /* Logo ke tengah di mobile */
+        top: 15px;
+    }
+
+    .auth-right h2 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .auth-form {
+        max-width: 100%; /* Form memenuhi lebar layar HP */
+        padding: 0 10px;
+    }
+
+    .auth-left h1 {
+        font-size: 28px;
+    }
+}
+
+/* --- EXTRA UNTUK HP SANGAT KECIL --- */
+@media (max-width: 480px) {
+    .auth-right {
+        padding-top: 100px;
+    }
+    
+    .btn-green, .btn-orange {
+        width: 100%; /* Tombol lebar penuh agar mudah diklik jari */
+    }
+}

@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    /* ← tambahkan ini */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary: #006d44;
+    /* Warna sidebar */
+    --accent: #f38a2c;
+    /* Warna kartu oranye */
+    --bg-light: #f4f4f4;
+    --input-bg: #d9d9d9;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* --- SIDEBAR RESPONSIVE --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--primary);
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+/* --- FORM CALCULATOR --- */
+.calculator-card {
+    background-color: var(--primary);
+    color: white; /* Teks di dalam card hijau menjadi putih */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 900px; 
+    margin: 0 auto;    
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px 50px; /* Jarak antar kolom lebih lega */
+}
+
+.form-group label {
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling Input & Select */
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: #333;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+input::placeholder {
+    font-weight: normal;
+    color: #999;
+}
+
+/* Tombol Submit */
+.btn-submit {
+    background-color: white;
+    color: var(--primary);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: var(--accent);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* --- TAMPILAN HASIL & ERROR --- */
+.result-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 30px auto 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    color: #333;
+}
+
+.error-card {
+    background-color: #fde8e8;
+    color: #c81e1e;
+}
+
+.result-title {
+    color: var(--primary);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.result-grid p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.highlight-text {
+    color: var(--accent);
+    font-size: 1.15rem;
+}
+
+.result-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .sidebar { width: 200px; }
+    .form-grid { gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+    .main-content { padding: 15px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .calculator-card { padding: 25px; }
+    .dual-input { gap: 15px; }
+}
+
+@media (max-width: 480px) {
+    .form-group label { font-size: 1rem; }
+    input, select { padding: 12px; }
+}
