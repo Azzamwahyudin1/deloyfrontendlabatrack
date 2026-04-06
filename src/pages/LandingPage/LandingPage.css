@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 .backround-color {
@@ -93,7 +92,7 @@
   background-color: #e67610;
 }
 
-.button-login:hover {
+.btn-login:hover {
   transform: scale(1.07);
 }
 
@@ -126,7 +125,7 @@
   /* ← geser kiri/kanan */
   bottom: -50px;
   /*← geser atas/bawah */
-  width: 300px;
+  width: 3;
   /* ← perbesar/perkecil orangnya */
   z-index: 2;
   object-fit: contain;
@@ -480,97 +479,5 @@
 
   .footer-logo-main {
     width: 180px;
-  }
-}
-
-/* ===== TAMBAHAN RESPONSIVE ===== */
-
-/* Fix manekin & hero image di semua device */
-@media (max-width: 1024px) {
-  .hero-image {
-    min-height: 380px;
-    justify-content: center;
-  }
-
-  .manekin {
-    width: 280px;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px;
-  }
-
-  .hero-image {
-    min-height: 300px;
-    width: 100%;
-  }
-
-  .hero-img {
-    width: 280px;
-    height: 280px;
-  }
-
-  .manekin {
-    width: 220px;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .fitur {
-    margin-top: 30px;
-  }
-
-  .p-fitur {
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-img {
-    width: 230px;
-    height: 230px;
-  }
-
-  .manekin {
-    width: 180px;
-  }
-
-  .hero-image {
-    min-height: 250px;
-  }
-
-  .h1-fitur {
-    font-size: 28px;
-  }
-}
-
-/* HP super kecil (iPhone SE, dll) */
-@media (max-width: 375px) {
-  .hero-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .highlight-box h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero-img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .manekin {
-    width: 155px;
-  }
-
-  .hero-image {
-    min-height: 220px;
   }
 }
