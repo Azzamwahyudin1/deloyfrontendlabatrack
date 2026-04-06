@@ -62,10 +62,13 @@
 .highlight-box {
   background-color: #1eb589;
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 20px;
   margin-bottom: 30px;
-  overflow-x: hidden;
+
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .highlight-box h1 {

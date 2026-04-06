@@ -64,7 +64,6 @@
   background-color: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
-  overflow-x: hidden;
 }
 
 .stat-card h3 {
