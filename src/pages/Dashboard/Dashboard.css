@@ -54,10 +54,24 @@
 
 /* Stats Grid */
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 30px;
+  display: flex; /* Berjejer ke samping */
+  gap: 16px; /* Jarak antar card */
+  overflow-x: auto; /* Aktifkan scroll horizontal */
+  padding: 10px 5px; /* Biar shadow card nggak kepotong */
+  scroll-snap-type: x mandatory; /* EFEK MAGNET: Card akan berhenti pas di tengah */
+  -webkit-overflow-scrolling: touch; /* Biar scroll halus di iPhone */
+}
+
+/* Supaya scrollbar-nya tidak terlihat */
+.stats-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.stat-card {
+  min-width: 280px; /* TENTUKAN LEBAR CARD: Biar nggak gepeng */
+  flex-shrink: 0; /* Biar card nggak menyusut */
+  scroll-snap-align: center; /* Titik berhenti magnetnya di tengah */
+  /* ... sisa style card kamu ... */
 }
 
 .stat-card {
