@@ -98,11 +98,11 @@
 }
 
 /* Image Section */
-.hero-image {
-  flex: 1;
+.hero-img {
   position: relative;
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 .hero-img {
