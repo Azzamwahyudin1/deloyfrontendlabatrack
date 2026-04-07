@@ -34,11 +34,13 @@ function Auth() {
             id="logo"
             onClick={() => navigate("/")}
           />
-          <h1>Selamat Datang!</h1>
-          <p>Ayo! Mulai Mengelola Keuangan dan Pemasukan Kamu di Labatrack</p>
-          <button className="btn-orange" onClick={() => navigate("/login")}>
-            Masuk
-          </button>
+          <div className="bg-selamat"> 
+            <h1>Selamat Datang!</h1>
+            <p>Ayo! Mulai Mengelola Keuangan dan Pemasukan Kamu di Labatrack</p>
+            <button className="btn-orange" onClick={() => navigate("/login")}>
+              Masuk
+            </button>
+          </div>
         </div>
 
         <div className="auth-right">
