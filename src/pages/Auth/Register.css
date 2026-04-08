@@ -55,7 +55,7 @@
     margin-top: 20px;
 }
 
-.btn-orange {
+.btn-orange:hover{
     transform: scale(1.07);
 }
 
