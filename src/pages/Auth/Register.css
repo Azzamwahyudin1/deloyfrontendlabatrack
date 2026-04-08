@@ -55,6 +55,10 @@
     margin-top: 20px;
 }
 
+.btn-orange {
+    transform: scale(1.07);
+}
+
 /* RIGHT */
 .auth-right {
     flex: 1;
@@ -151,47 +155,57 @@ h2 {
 /* --- RESPONSIVE UNTUK LAPTOP & DESKTOP --- */
 @media (min-width: 1025px) {
     .auth-box {
-        flex-direction: row; /* Berjejer ke samping */
+        flex-direction: row;
+        /* Berjejer ke samping */
     }
 
-    .auth-left, .auth-right {
+    .auth-left,
+    .auth-right {
         height: 100vh;
         padding: 60px;
     }
 
     .auth-form {
-        max-width: 400px; /* Form sedikit lebih lebar di laptop */
+        max-width: 400px;
+        /* Form sedikit lebih lebar di laptop */
     }
 }
 
 /* --- RESPONSIVE UNTUK TABLET & MOBILE --- */
 @media (max-width: 1024px) {
     .auth-container {
-        height: auto; /* Biar bisa di-scroll jika konten panjang */
+        height: auto;
+        /* Biar bisa di-scroll jika konten panjang */
         min-height: 100vh;
     }
 
     .auth-box {
-        flex-direction: column; /* Tumpuk ke bawah */
+        flex-direction: column;
+        /* Tumpuk ke bawah */
     }
 
     .auth-left {
-        order: 2; /* Pindahkan panel hijau ke bawah form pada mobile (opsional) */
+        order: 2;
+        /* Pindahkan panel hijau ke bawah form pada mobile (opsional) */
         padding: 50px 20px;
         min-height: 300px;
     }
 
     .auth-right {
-        order: 1; /* Form login muncul duluan di mobile */
-        padding: 80px 20px 40px 20px; /* Padding atas lebih besar karena ada logo */
+        order: 1;
+        /* Form login muncul duluan di mobile */
+        padding: 80px 20px 40px 20px;
+        /* Padding atas lebih besar karena ada logo */
         background: white;
     }
 
     .logo {
-        width: 180px; /* Logo mengecil di mobile */
+        width: 180px;
+        /* Logo mengecil di mobile */
         height: auto;
         left: 50%;
-        transform: translateX(-50%); /* Logo ke tengah di mobile */
+        transform: translateX(-50%);
+        /* Logo ke tengah di mobile */
         top: 15px;
     }
 
@@ -201,7 +215,8 @@ h2 {
     }
 
     .auth-form {
-        max-width: 100%; /* Form memenuhi lebar layar HP */
+        max-width: 100%;
+        /* Form memenuhi lebar layar HP */
         padding: 0 10px;
     }
 
@@ -215,8 +230,10 @@ h2 {
     .auth-right {
         padding-top: 100px;
     }
-    
-    .btn-green, .btn-orange {
-        width: 100%; /* Tombol lebar penuh agar mudah diklik jari */
+
+    .btn-green,
+    .btn-orange {
+        width: 100%;
+        /* Tombol lebar penuh agar mudah diklik jari */
     }
 }
